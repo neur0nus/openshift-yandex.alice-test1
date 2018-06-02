@@ -16,7 +16,7 @@
  *  limitations under the License.
  */
 
-package org.openshift.quickstarts.undertow.servlet;
+package com.neuronus.yandex.alice.test1;
 
 import javax.net.ssl.KeyManager;
 import javax.net.ssl.KeyManagerFactory;

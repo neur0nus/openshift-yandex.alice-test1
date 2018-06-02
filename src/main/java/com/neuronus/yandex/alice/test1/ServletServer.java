@@ -44,8 +44,6 @@ public class ServletServer {
 
     public static void main(final String[] args) {
         try {
-        	System.getProperties().setProperty("java.util.logging.manager","org.jboss.logmanager.LogManager");
-        	
             DeploymentInfo servletBuilder = deployment()
                     .setClassLoader(ServletServer.class.getClassLoader())
                     .setContextPath(MYAPP)

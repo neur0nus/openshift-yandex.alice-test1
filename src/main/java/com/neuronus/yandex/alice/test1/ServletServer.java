@@ -52,10 +52,8 @@ public class ServletServer {
                     .addServlets(
                             servlet("MessageServlet", MessageServlet.class)
                                     .addInitParam("message", "Hello World")
-                                    .addMapping("/*"),
-                            servlet("MyServlet", MessageServlet.class)
-                                    .addInitParam("message", "MyServlet")
-                                    .addMapping("/myservlet"));
+                                    .addMapping("/*")
+                                );
 
             DeploymentManager manager = defaultContainer().addDeployment(servletBuilder);
             manager.deploy();

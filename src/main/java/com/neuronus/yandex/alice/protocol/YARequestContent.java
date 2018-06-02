@@ -6,6 +6,6 @@ public class YARequestContent {
 	public String original_utterance;
 	public String type;
     public YARequestContentMarkup markup;
-    public String payload;
+    //public String payload;
 	
 }

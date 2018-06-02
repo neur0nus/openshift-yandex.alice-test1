@@ -19,6 +19,7 @@
 package com.neuronus.yandex.alice.test1;
 
 import java.io.IOException;import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -26,8 +27,6 @@ import javax.servlet.ServletInputStream;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import org.jboss.logmanager.Logger;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

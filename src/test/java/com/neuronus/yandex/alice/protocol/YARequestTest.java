@@ -29,7 +29,7 @@ class YARequestTest {
 	@Test
 	void testFromJSON() throws Exception {
 		YARequest yareq = MessageServlet.GSON.fromJson(this.testReqJSON,YARequest.class);
-		assertEquals("где ближайшее отделение", yareq.request.command, "Unexpected value after JSON deserialization");
+		assertEquals("test command", yareq.request.command, "Unexpected value after JSON deserialization");
 	}
 
 }

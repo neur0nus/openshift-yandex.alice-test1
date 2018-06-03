@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.LineNumberReader;
-import java.nio.charset.Charset;
 
 import com.neuronus.yandex.alice.protocol.YARequest;
 import com.neuronus.yandex.alice.protocol.YAResponse;
@@ -31,7 +30,7 @@ public class DialogProcessor {
 		return res;
 	}
 	
-	public String loadRequestContentAsString(InputStream inp, String ch) throws IOException {
+	public static String loadRequestContentAsString(InputStream inp, String ch) throws IOException {
 		if (inp==null) return null;
 		StringBuilder res = new StringBuilder();
 		LineNumberReader reader = new LineNumberReader(new InputStreamReader(inp,ch));

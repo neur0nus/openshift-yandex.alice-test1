@@ -36,10 +36,11 @@ import com.neuronus.yandex.alice.protocol.YAResponse;
 
 public class MessageServlet extends HttpServlet {
 
+	public static final Logger LOG = Logger.getLogger(MessageServlet.class.getName());
+	public static final Gson GSON = new GsonBuilder().create();
+
 	private static final long serialVersionUID = -6851106130642482976L;
-	private static final Logger LOG = Logger.getLogger(MessageServlet.class.getName());
-	private static final Gson GSON = new GsonBuilder().create();
-	
+
 	private DialogProcessor dpoc;
 	
     @Override
@@ -57,7 +58,7 @@ public class MessageServlet extends HttpServlet {
     protected void doPost(final HttpServletRequest req, final HttpServletResponse resp) throws ServletException, IOException {
     	try {
 	    	ServletInputStream inp = req.getInputStream();
-	    	String reqJSON = this.dpoc.loadRequestContentAsString(inp, "UTF-8");
+	    	String reqJSON = DialogProcessor.loadRequestContentAsString(inp, "UTF-8");
 	    	LOG.log(Level.SEVERE, "Received request: "+reqJSON);
 	    	YARequest yareq = GSON.fromJson(reqJSON,YARequest.class);
 	    	YAResponse yares = this.dpoc.handleRequest(yareq);

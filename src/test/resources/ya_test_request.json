@@ -5,7 +5,7 @@
     "client_id": "ru.yandex.searchplugin/5.80 (Samsung Galaxy; Android 4.4)"
   },
   "request": {
-     "command": "test command",
+     "command": "проверка",
      "original_utterance": "Алиса спроси у Сбербанка где ближайшее отделение",
      "type": "SimpleUtterance",
      "markup": {
